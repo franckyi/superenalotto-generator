@@ -32,9 +32,10 @@ function App() {
         <ul
           style={{
             display: "flex",
-            gap: "1rem",
+            gap: "5px",
+            height: "40px",
+            padding: 0,
             listStyle: "none",
-            height: "50px",
           }}
         >
           {list.length > 0 &&
@@ -42,13 +43,13 @@ function App() {
               <li
                 key={n}
                 style={{
-                  width: "50px",
-                  height: "50px",
-                  lineHeight: "50px",
+                  width: "40px",
+                  height: "40px",
+                  lineHeight: "40px",
                   background: "white",
                   color: "green",
                   borderRadius: "55px",
-                  fontSize: "2rem",
+                  fontSize: "1.4rem",
                   fontWeight: "bold",
                 }}
               >
@@ -59,7 +60,6 @@ function App() {
         {isLoading && <Spinner />}
       </div>
       {list.length < 6 && <button onClick={handleGenerateClick}>Genera</button>}
-      {/* {isLoading && <Spinner />} */}
       {list.length > 5 && <button onClick={() => setList([])}>Resetta</button>}
     </>
   );
